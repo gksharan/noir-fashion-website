@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NOIR — Contact</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg noir-navbar">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand noir-brand" href="index.html">NOIR</a>
+    <button class="navbar-toggler noir-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item"><a class="nav-link noir-link" href="index.html" target="_blank">Home</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="about.html" target="_blank">About</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="services.html" target="_blank">Services</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="portfolio.html" target="_blank">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="blog.html" target="_blank">Journal</a></li>
+        <li class="nav-item"><a class="nav-link noir-link active" href="contact.html" target="_blank">Contact</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="faq.html" target="_blank">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="contact-wrapper">
+  <!-- LEFT: IMAGE WITH INFO -->
+  <div class="contact-left">
+    <img class="contact-left-img" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&q=80&fit=crop" alt="Contact NOIR"/>
+    <div class="contact-left-overlay">
+      <div>
+        <p class="eyebrow" style="color:var(--grey)">Get In Touch</p>
+        <h2 class="section-title" style="color:var(--white)">Let's create<br>something <em>beautiful</em></h2>
+        <p class="body-text">Whether you're looking for personal styling, a bespoke commission, or a collaboration — we'd love to hear from you.</p>
+      </div>
+      <div>
+        <div class="contact-info-label">Email</div>
+        <div class="contact-info-value">hello@noirstudio.in</div>
+        <div class="contact-info-label">Phone</div>
+        <div class="contact-info-value">+91 98765 43210</div>
+        <div class="contact-info-label">Atelier</div>
+        <div class="contact-info-value">MG Road, Mangaluru, Karnataka</div>
+        <div class="social-links mt-3">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: FORM -->
+  <div class="contact-right">
+    <p class="eyebrow" style="margin-bottom:3rem">Send a Message</p>
+    <div id="contactForm">
+      <label class="form-label-noir">Full Name</label>
+      <input type="text" class="form-control-noir" placeholder="Your name"/>
+      <label class="form-label-noir">Email Address</label>
+      <input type="email" class="form-control-noir" placeholder="your@email.com"/>
+      <label class="form-label-noir">Subject</label>
+      <input type="text" class="form-control-noir" placeholder="How can we help?"/>
+      <label class="form-label-noir">Message</label>
+      <textarea class="form-control-noir" placeholder="Tell us about your vision..."></textarea>
+      <button class="btn-dark" onclick="submitForm()">Send Message</button>
+    </div>
+    <div id="formSuccess" style="display:none; text-align:center; padding:3rem;">
+      <i class="fas fa-check-circle" style="font-size:3rem; color:var(--black); margin-bottom:1rem; display:block;"></i>
+      <h3 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; margin-bottom:1rem;">Message Received</h3>
+      <p style="font-size:0.8rem; color:var(--grey); letter-spacing:1px;">We'll be in touch within 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="noir-footer">
+  <div class="mb-3">
+    <a href="index.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="faq.html" target="_blank">FAQ</a>
+  </div>
+  &copy; 2026 NOIR Fashion & Lifestyle. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function submitForm() {
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+## Styling — `shared.css`
+
+All seven pages import a single shared stylesheet. It is organised into clearly commented sections:
+
+```
+shared.css
+├── CSS Variables (:root)       — colour tokens
+├── Global Reset + Base         — box-sizing, fonts, body
+├── Navbar                      — sticky top nav, brand, links
+├── Buttons                     — .btn-noir, .btn-dark, outline variant
+├── Typography Utilities        — .eyebrow, .section-title, .body-text
+├── Footer                      — dark footer with nav links
+├── Home Page Styles
+├── About Page Styles
+├── Services Page Styles
+├── Portfolio Page Styles
+├── Blog Page Styles
+├── Contact Page Styles
+├── FAQ Page Styles
+└── Responsive (max-width: 991px)
+```
+
+### CSS Variables
+
+```css
+:root {
+  --black:      #0a0a0a;
+  --white:      #f8f7f5;
+  --grey:       #888;
+  --light-grey: #e8e6e1;
+  --mid-grey:   #ccc;
+}
+```
+
+### Key CSS Techniques
+
+**Marquee animation (Home page)**
+The scrolling ticker uses `@keyframes marquee` translating the inner element from `0` to `-50%` over 22 seconds infinitely. The text content is duplicated in the HTML so the loop appears seamless.
+
+**FAQ accordion (FAQ page)**
+The expand/collapse animation uses the `max-height` CSS trick — answers start at `max-height: 0; overflow: hidden` and transition to `max-height: 300px` when the `.open` class is applied by JavaScript.
+
+**Hover colour inversions (Services, Blog)**
+Service rows and blog cards invert to black background with white text purely via CSS `transition` on the `:hover` state — no JavaScript.
+
+**Image zoom on hover (Portfolio, Team, Blog)**
+Images use `transform: scale(1.04–1.06)` with `transition: 0.6s ease` for a subtle zoom effect, combined with `overflow: hidden` on the parent to contain the scale.
+
+---
+
+### CSS Variables
+
+```css
+:root {
+  --black:      #0a0a0a;
+  --white:      #f8f7f5;
+  --grey:       #888;
+  --light-grey: #e8e6e1;
+  --mid-grey:   #ccc;
+}
+```
+
+### Key CSS Techniques
+
+**Marquee animation (Home page)**
+The scrolling ticker uses `@keyframes marquee` translating the inner element from `0` to `-50%` over 22 seconds infinitely. The text content is duplicated in the HTML so the loop appears seamless.
+
+**FAQ accordion (FAQ page)**
+The expand/collapse animation uses the `max-height` CSS trick — answers start at `max-height: 0; overflow: hidden` and transition to `max-height: 300px` when the `.open` class is applied by JavaScript.
+
+**Hover colour inversions (Services, Blog)**
+Service rows and blog cards invert to black background with white text purely via CSS `transition` on the `:hover` state — no JavaScript.
+
+**Image zoom on hover (Portfolio, Team, Blog)**
+Images use `transform: scale(1.04–1.06)` with `transition: 0.6s ease` for a subtle zoom effect, combined with `overflow: hidden` on the parent to contain the scale.
+
+---
+
+## JavaScript
+
+Custom JavaScript is minimal — three pages use it, all in inline `<script>` tags.
+
+### `contact.html` — Form success toggle
+
+```javascript
+function submitForm() {
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+```
+
+Called via `onclick="submitForm()"` on the Send Message button. Hides the form div and reveals a pre-built success message. No network request is made — this is a UI-only simulation.
+
+---
+
+### `faq.html` — Accordion toggle
+
+```javascript
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+```
+
+Called via `onclick="toggleFaq(this)"` on each `.faq-question` element. Implements a one-open-at-a-time accordion:
+1. Checks if the clicked item is currently open.
+2. Collapses all FAQ items by removing the `open` class.
+3. If the clicked item was closed, re-adds `open` to it — expanding just that item.
+
+The visual animation (smooth expand, icon rotation) is handled entirely by CSS transitions reacting to the `open` class.
+
+---
+
+### `portfolio.html` — Filter button active state
+
+```javascript
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+```
+
+Selects all `.filter-btn` elements and attaches a click listener to each. On click, removes `active` from every button then adds it to the one clicked.
+
+> **Note:** The filter buttons currently only update the active visual state. Filtering portfolio items by category (Editorial / Bespoke / Campaign) is not yet implemented and can be added in a future iteration.
+
+---

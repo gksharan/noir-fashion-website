@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NOIR — FAQ</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg noir-navbar">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand noir-brand" href="index.html">NOIR</a>
+    <button class="navbar-toggler noir-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-1">
+        <li class="nav-item"><a class="nav-link noir-link" href="index.html" target="_blank">Home</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="about.html" target="_blank">About</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="services.html" target="_blank">Services</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="portfolio.html" target="_blank">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="blog.html" target="_blank">Journal</a></li>
+        <li class="nav-item"><a class="nav-link noir-link" href="contact.html" target="_blank">Contact</a></li>
+        <li class="nav-item"><a class="nav-link noir-link active" href="faq.html" target="_blank">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- FAQ HERO -->
+<div class="faq-hero">
+  <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=1400&q=80&fit=crop" alt="FAQ banner"/>
+  <div class="faq-hero-overlay">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="section-title">Questions,<br><em>answered</em></h2>
+  </div>
+</div>
+
+<!-- FAQ ITEMS -->
+<div class="faq-container">
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      What does a personal styling session involve?
+      <i class="fas fa-plus faq-icon"></i>
+    </div>
+    <div class="faq-answer">
+      <p>Our personal styling sessions begin with an in-depth consultation to understand your lifestyle, preferences, and goals. We then conduct a wardrobe audit, provide colour and body analysis, and deliver a personalised styling roadmap with shopping recommendations tailored to your budget.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      How long does a bespoke garment take to complete?
+      <i class="fas fa-plus faq-icon"></i>
+    </div>
+    <div class="faq-answer">
+      <p>Bespoke garments typically take 4–8 weeks from initial consultation to final fitting. This includes fabric selection, pattern making, fittings, and finishing. Rush orders may be accommodated at an additional fee depending on availability.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      Do you offer virtual styling consultations?
+      <i class="fas fa-plus faq-icon"></i>
+    </div>
+    <div class="faq-answer">
+      <p>Yes, we offer virtual consultations via video call for clients across India and internationally. We simply require you to share photos of your current wardrobe and lifestyle context ahead of the session for the best results.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      What is your sustainability approach?
+      <i class="fas fa-plus faq-icon"></i>
+    </div>
+    <div class="faq-answer">
+      <p>Sustainability is central to everything we do. We source fabrics from certified ethical suppliers, work with local artisans to minimise transport footprint, use zero-waste pattern cutting where possible, and always recommend a "buy less, choose well" philosophy.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      Can NOIR dress me for a specific event or occasion?
+      <i class="fas fa-plus faq-icon"></i>
+    </div>
+    <div class="faq-answer">
+      <p>Absolutely. Our event dressing service covers weddings, galas, red carpet events, and business dinners. We handle outfit selection, alterations, accessories, and on-the-day styling if required.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      How do I begin working with NOIR?
+      <i class="fas fa-plus faq-icon"></i>
+    </div>
+    <div class="faq-answer">
+      <p>Simply reach out via our contact page or email us directly. We'll schedule a complimentary 20-minute discovery call to understand your needs and recommend the right service. From there, we guide you through every step.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      Do you work with brands and businesses?
+      <i class="fas fa-plus faq-icon"></i>
+    </div>
+    <div class="faq-answer">
+      <p>Yes — we collaborate with fashion brands, lifestyle labels, and creative agencies on lookbooks, campaign styling, brand identity alignment, and content creation. Each partnership is scoped individually. Get in touch to discuss your project.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="faq-cta">
+  <div class="faq-cta-img">
+    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80&fit=crop" alt="Contact"/>
+  </div>
+  <div class="faq-cta-content">
+    <h2 class="section-title">Still have<br><em>questions?</em></h2>
+    <p class="body-text">Our team is happy to help. Reach out and we'll respond within 24 hours.</p>
+    <a href="contact.html" target="_blank" class="btn-noir">Contact Us</a>
+  </div>
+</div>
+
+<footer class="noir-footer">
+  <div class="mb-3">
+    <a href="index.html" target="_blank">Home</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="services.html" target="_blank">Services</a>
+  </div>
+  &copy; 2026 NOIR Fashion & Lifestyle. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
